@@ -119,8 +119,3 @@ class Spider:
 
         return external_links
 
-
-if __name__ == "__main__":
-    s = Spider(0, 4)
-    links = s.crawl('ynet.co.il')
-    print json.dumps(links)

@@ -1,5 +1,5 @@
 # Internet Archive Link Extractor
-This tool was built to extract external links of a website snapshots in the Internet Archive. The output can be used to preform link analysis on website.
+This tool was built to extract external links of a website snapshots in the Internet Archive. The output can be used to perform link analysis on website.
 
 ### Preparations
 

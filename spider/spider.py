@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup, SoupStrainer
 import tldextract
 import json
 import re
-from urlparse import urlparse, urlunparse
+from urllib.parse import urlparse
 import requests
 
 
@@ -25,7 +25,7 @@ class Spider:
 
         p = urlparse('http://' + url[42:])
         page = p.path
-        self.extract_links_from_url(url[:42] + urlunparse([p.scheme, p.netloc, '', '', '', '']),
+        self.extract_links_from_url(url[:42] + urlparse([p.scheme, p.netloc, '', '', '', '']),
                                     page,
                                     0,
                                     pass_urls,

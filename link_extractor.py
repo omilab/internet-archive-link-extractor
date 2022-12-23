@@ -1,5 +1,5 @@
 import json
-import Queue
+import queue
 import threading
 import argparse
 
@@ -8,7 +8,7 @@ from spider import spider
 
 class LinkExtraction:
     def __init__(self):
-        self.q = Queue.Queue()
+        self.q = queue.Queue()
         self.args = None
 
     def parse_arguments(self):
@@ -34,7 +34,7 @@ class LinkExtraction:
                     with open(self.args.output, 'a') as output_file:
                         output_file.write('%s\n' % json.dumps(obj))
                 else:
-                    print json.dumps(obj)
+                    print(json.dumps(obj))
 
             except Exception as ex:
                 pass
